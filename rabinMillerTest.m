@@ -16,7 +16,7 @@ function is_prime = rabinMillerTest(n)
       d = bitshift(d,-1);
       for a=0:randi([2,n-1])
         x = powermod(a,d,n);
-        if x!=1 && x+1 != n
+        if x~=1 && x+1 ~= n
           for r=1:s
             x = powermod(x,2,n);
             if x == 1 % composite for sure
