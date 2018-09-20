@@ -49,15 +49,17 @@ The calculated values *x* and *y* are utilized in the Chinese Remainder Theorem.
 ### Addition of Large Numbers using CRT
 Given two large number which cannot be stored in a word of memory, we can split the problem into smaller pieces and then solve them using Chinese Remainder Theorem.  
 Steps:  
-1. Suppose given numbers are $`x_1`$ and $`x_2`$.  
+1. Suppose given numbers are $`x_1`$ and $`x_2`$.
 2. Choose two primes *p* and *q* such that p < (word-size), q < (word-size) and pq > (word size).  
 3. Find $`a_1=/x_1 (mod p)`$, $`b_1=x_1 (mod q)`$ and $`a_2=x_2 (mod p)`$, $`b_2=x_2 (mod q)`$.  
-4. Find $`a=(a_1+a_2) (mod p)`$ and $`b=(b_1+b_2) (mod q)`$.  
+4. Find $`a=(a_1+a_2) (mod p)`$ and $`b=(b_1+b_2) (mod q)`$.
 5. Form the equations $`X=a (mod p)`$ and $`X=b (mod q)`$.  
 6. Solve equations using Chinese Remainder Theorem.
 
 ### Directory Structure
-1.
+1. main.m - main function
+2. crt.m - module containing code for Chinese Remainder Theorem
+3. euclid.m - module containing code for Extended Euclid's Algorithm
 
 ### Scope for Additional Work
 To further speed up the addition, r > 2 primes can be used.
