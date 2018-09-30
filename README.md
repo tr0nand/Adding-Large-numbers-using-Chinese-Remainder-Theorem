@@ -69,7 +69,7 @@ a = x3(mod p3)
 ....
 a = xk(mod pk)
 ```
-[Reference](https://cp-algorithms.com/algebra/chinese-remainder-theorem.html)
+[Reference](https://hal.inria.fr/hal-01551339/document)
 
 ### Directory Structure
 1. main.m - main function
