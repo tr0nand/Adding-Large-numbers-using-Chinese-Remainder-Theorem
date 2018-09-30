@@ -46,20 +46,36 @@ The following steps help us determine *x* and *y*
 
 ```
 The calculated values *x* and *y* are utilized in the Chinese Remainder Theorem.
-### Addition of Large Numbers using CRT
-Given two large number which cannot be stored in a word of memory, we can split the problem into smaller pieces and then solve them using Chinese Remainder Theorem.  
-Steps:  
-1. Suppose given numbers are $`x_1`$ and $`x_2`$.
-2. Choose two primes *p* and *q* such that p < (word-size), q < (word-size) and pq > (word size).  
-3. Find $`a_1=/x_1 (mod p)`$, $`b_1=x_1 (mod q)`$ and $`a_2=x_2 (mod p)`$, $`b_2=x_2 (mod q)`$.  
-4. Find $`a=(a_1+a_2) (mod p)`$ and $`b=(b_1+b_2) (mod q)`$.
-5. Form the equations $`X=a (mod p)`$ and $`X=b (mod q)`$.  
-6. Solve equations using Chinese Remainder Theorem.
+### Garner's Algorithm - An extension of the Chinese Remainder Theorem
+Since the size of the word is too large to fit the memory, we are using an algorithm known as Garner's algorithm which will help us in this task.
+Garner's algorithm is an extension of the Chinese Remainder Theorem which is specifically utlized for large numbers.  
+
+A large number a can be written in the form
+```math
+a = x1 + x2*p1 + x3*p1*p2 + .... xk*p1*p2...*pk-1
+
+```
+where
+```math
+	p1,p2...,pk are all relatively prime
+
+
+```
+and
+```math
+a = x1(mod p1)
+a = x2(mod p2)
+a = x3(mod p3)
+....
+a = xk(mod pk)
+```
+[Reference](https://cp-algorithms.com/algebra/chinese-remainder-theorem.html)
 
 ### Directory Structure
 1. main.m - main function
 2. crt.m - module containing code for Chinese Remainder Theorem
 3. euclid.m - module containing code for Extended Euclid's Algorithm
+4. garner.m - module containing code for Garner's Algorithm
 
 ### Scope for Additional Work
 To further speed up the addition, r > 2 primes can be used.
