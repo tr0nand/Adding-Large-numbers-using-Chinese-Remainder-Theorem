@@ -1,6 +1,12 @@
 function sol = crt(prime, residues)
-  p_prod = prod(prime)
+  % function to compute a number satisfying CRT conditions
+  % call using crt(list of primes, list of residues)
+  
+  p_prod = prod(prime) % product of all primes
+  
   sol = 0;
+  
+  % loop to go over each residue, and solve using crt 
   for i=1:length(prime)
     temp_p = p_prod/prime(i);
     [gcd,x_euc,y_euc] = euclid(prime(i),temp_p);
@@ -8,5 +14,5 @@ function sol = crt(prime, residues)
     sol = sol + residues(i)*y_euc*temp_p;
     sol = mod(sol,p_prod);
   end
-  return
+  
 end
