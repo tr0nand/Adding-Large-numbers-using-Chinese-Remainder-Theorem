@@ -1,4 +1,5 @@
-%Function to implement Euclids Extended Algorithm
+% Function to implement Euclids Extended Algorithm
+% Example: euclid(10, 12)
 
 function [d,x,y] = euclid(p,q)
 
