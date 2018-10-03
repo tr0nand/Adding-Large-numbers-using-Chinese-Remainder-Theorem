@@ -14,5 +14,7 @@ function sol = crt(prime, residues)
     sol = sol + residues(i)*y_euc*temp_p;
     sol = mod(sol,p_prod);
   end
-
+  if sol ==0
+    sol = p_prod;
+  end
 end
