@@ -46,36 +46,24 @@ The following steps help us determine *x* and *y*
 
 ```
 The calculated values *x* and *y* are utilized in the Chinese Remainder Theorem.
-### Garner's Algorithm - An extension of the Chinese Remainder Theorem
-Since the size of the word is too large to fit the memory, we are using an algorithm known as Garner's algorithm which will help us in this task.
-Garner's algorithm is an extension of the Chinese Remainder Theorem which is specifically utlized for large numbers.  
-
-A large number a can be written in the form
-```math
-a = x1 + x2*p1 + x3*p1*p2 + .... xk*p1*p2...*pk-1
-
-```
-where
-```math
-	p1,p2...,pk are all relatively prime
-
-
-```
-and
-```math
-a = x1(mod p1)
-a = x2(mod p2)
-a = x3(mod p3)
-....
-a = xk(mod pk)
-```
-[Reference](https://hal.inria.fr/hal-01551339/document)
 
 ### Directory Structure
-1. main.m - main function
-2. crt.m - module containing code for Chinese Remainder Theorem
-3. euclid.m - module containing code for Extended Euclid's Algorithm
-4. garner.m - module containing code for Garner's Algorithm
+1. src/main.m - main function
+2. src/crt.m - module containing code for Chinese Remainder Theorem
+3. src/euclid.m - module containing code for Extended Euclid's Algorithm
+4. src/genPrimes.m - module containing code that generates primes to be utilized for CRT.
+5. src/addusingCRT.m - module containing code that adds two numbers using CRT.
+6. src/plotter.m - module containing code that helps in plotting the time taken to obtain results.
+7. src/printArrayWithMessage.m - module containing code for formatted printing.
+8. src/unused/ - folder that contains various modules which were written but finally not implemented.
+9. img/ - folder that contains the various screenshots and graphs.
 
-### Scope for Additional Work
-To further speed up the addition, r > 2 primes can be used.
+
+### Screenshots
+![Screenshot1](img/Screenshot1.png)
+
+![Screenshot1](img/Screenshot2.png)
+
+### Graph
+
+![Graph](img/graph.png)

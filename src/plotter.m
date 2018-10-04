@@ -21,4 +21,8 @@ function plotter()
     times = [times time_taken];
   end
   plot(nums, times);
+  ylabel('Time(s)')
+  xlabel('log(Number of digits in input numbers)')
+  title('Plotted Graph')
+
 end
