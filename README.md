@@ -21,7 +21,7 @@ Suppose we wish to solve the equations:
 where p and q are co-prime.
 The Chinese Remainder Theorem states that there exists a unique solution for x (mod pq).
 
-Let p1=p<sup>-1</sup>(modq) and q1=<sup>q−1</sup>(modp). These must exist since *p*,*q* are coprime. Then if *y* is an integer such that $`y=aqq_1+bpp_1 (modpq)`$ then *y* satisfies both equations (i) and (ii).
+Let p<sub>1</sub>=p<sup>-1</sup>(modq) and q<sub>1</sub>=q<sup>-1</sup>(modp). These must exist since *p*,*q* are coprime. Then if *y* is an integer such that y=aqq<sub>1</sub>+bpp<sub>1</sub> (modpq) then *y* satisfies both equations (i) and (ii).
 
 To find y, using Euclid's Extended Algorithm:
 1. Find m and n such that $`pm+qn=1`$.
